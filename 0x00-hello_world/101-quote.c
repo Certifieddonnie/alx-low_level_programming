@@ -10,8 +10,8 @@
 
 int main(void)
 {
-	wchar_t str[] = L"and that piece of art is useful\" - Dora Korpar, 2015-10-19";
+	wchar_t sr[] = L"and that piece of art is useful\" - Dora Korpar, 2015-10-19";
 
-	wprintf(L"%ls\n", str);
-	return (0);
+	wprintf(L"%ls\n", sr);
+	return (1);
 }

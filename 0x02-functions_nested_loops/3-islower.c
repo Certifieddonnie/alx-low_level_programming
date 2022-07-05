@@ -2,7 +2,7 @@
 
 /**
  * _islower - Entry Point to function
- * Description: Tells the cases of  c
+ * @c: Tells the cases of  c
  *
  * Return: depends on the output
  */

@@ -2,7 +2,7 @@
 
 /**
  * print_sign - Entry Point
- * Description: Function to tell sign of n
+ * @n: number
  *
  * Return: Always 0
  */

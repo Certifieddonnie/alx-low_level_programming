@@ -2,7 +2,7 @@
 
 /**
  * _isalpha - Entry Point
- * Description: Function to tell an alphabet
+ * @c: alphabet
  *
  * Return: depends on outcome
  */

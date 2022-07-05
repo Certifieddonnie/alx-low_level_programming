@@ -1,19 +1,13 @@
-#include <stdio.h>
+#include <unistd.h>
 
 /**
- * main - Entry Point
- * Description: Program to print alphabets in lowercase
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
  *
- * Return: Always the value 0 (success)
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-
-int main(void)
+int _putchar(char c)
 {
-	char c;
-
-	for (c = 'a'; c <= 'z'; ++c)
-		putchar(c);
-
-	putchar('\n');
-	return(0);
+	return (write(1, &c, 1));
 }

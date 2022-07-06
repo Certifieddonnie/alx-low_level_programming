@@ -8,24 +8,13 @@
 
 int main(void)
 {
-	unsigned long int a, b, c;
-	int i;
+	int a, sum;
 
-	a = 0;
-	b = 0;
-	c = 0;
-
-	for (i = 0; i < 1024; ++i)
+	for (a =3; a < 1024; a++)
 	{
-		if ((i % 3) == 0)
-		{
-			a = a + 1;
-		} else if ((i % 5) == 0)
-		{
-			b = b + 1;
-		}
+		if (a % 3 == 0 || a % 5 == 0)
+			sum += a;
 	}
-	c = a + b;
-	printf("%lu\n", c);
+	printf("%d\n", sum);
 	return (0);
 }

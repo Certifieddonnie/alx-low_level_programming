@@ -9,15 +9,20 @@
 
 int main(void)
 {
-	int n = 0, n1 = 1, n3, i;
+	long int n = 1, n1 = 2, n3, i;
 
-	printf("\n%d %d", n, n1);
-	for (i = 2; i < 50; ++i)
+	for (i = 1; i <= 50; ++i)
 	{
+		if (n != 20365011074)
+		{
+			printf("%ld, ", n);
+		} else
+		{
+			printf("%ld\n", n);
+		}
 		n3 = n + n1;
-		printf(" %d", n3);
-		n = n;
-		n1 = n1;
+		n = n1;
+		n1 = n3;
 	}
 
 	return (0);

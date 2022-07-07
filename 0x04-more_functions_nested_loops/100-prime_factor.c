@@ -9,23 +9,14 @@
 
 int main(void)
 {
-	long long int num = 612852475143L;
-	int count = 2;
+	unsigned long int count = 3;
+	unsigned long int n = 612852475143;
 
-	if (num % count == 0)
+	for (; count < 12057; count += 2)
 	{
-		for (count = count; num > 1; count++)
-		{
-			while (num % count == 0)
-			{
-				num = num / count;
-			}
-		}
-		printf("%d\n", count - 1);
+		while (n % count == 0 && n != count)
+			n /= count;
 	}
-	else
-	{
-		printf("%lld\n", num);
-	}
+	printf("%lu\n", n);
 	return (0);
 }

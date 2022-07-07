@@ -11,5 +11,6 @@
 int mul(int a, int b)
 {
 	int pro = a * b;
+
 	return (pro);
 }

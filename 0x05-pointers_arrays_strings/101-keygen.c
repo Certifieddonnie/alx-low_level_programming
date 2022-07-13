@@ -13,14 +13,13 @@
 
 int main(void)
 {
+	char password[100];
 	int i = 0;
-
 	int rands = 0;
 	int total = 0;
 
 	srand((unsigned int)(time(NULL)));
 
-	char password[100];
 
 	for (i = 0; total <= 2644; i++)
 	{

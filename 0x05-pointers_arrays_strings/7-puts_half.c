@@ -10,9 +10,11 @@
 void puts_half(char *str)
 {
 	int n;
-	int i;
+	int i = 0;
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (; str[i] != '\0'; i++)
+	{
+	}
 
 	n = (i + 1) / 2;
 

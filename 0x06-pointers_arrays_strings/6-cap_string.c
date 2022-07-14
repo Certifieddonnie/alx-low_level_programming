@@ -9,11 +9,16 @@
 
 char *cap_string(char *s)
 {
-	int i;
+	int i = 0;
 	int sep[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 	int j;
+	if (s[i] >= 'a' && s[i] <= 'z')
+	{
+		s[i] = s[i] - 32;
+	}
+	i++;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (; s[i] != '\0'; i++)
 	{
 		for (j = 0; j < 13; j++)
 		{
@@ -23,6 +28,7 @@ char *cap_string(char *s)
 				{
 					s[i + 1] = s[i + 1] - 32;
 				}
+				break;
 			}
 		}
 	}

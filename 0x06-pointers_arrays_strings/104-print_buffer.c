@@ -14,7 +14,7 @@ void print_buffer(char *b, int size)
 	int i, j, k;
 
 	if (size <= 0)
-		putchar('\n');
+		printf("\n");
 	else
 	{
 		j = 0;
@@ -40,8 +40,8 @@ void print_buffer(char *b, int size)
 				else
 					printf("%c", b[i]);
 			}
-			putchar('\n');
 			j += 10;
+			printf("\n");
 		}
 	}
 }

@@ -12,7 +12,7 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int sum = 0, m, n, o, big, i = 0, j = 0;
+	int i = 0, j = 0, m, n, o, big, sum = 0;
 
 	while (n1[i] != '\0')
 		i++;
@@ -35,7 +35,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		else
 			sum = 0;
 		if (o > 0)
-			r[big] = (o % 10) + 48;
+		r[big] = (o % 10) + 48;
 		else
 			r[big] = '0';
 		if (i > 0)
@@ -46,7 +46,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			j--, n = n2[j] - 48;
 		else
 			n = 0;
-		size_r--;
+		big--, size_r--;
 	}
 	if (*(r) == '0')
 		return (r + 1);

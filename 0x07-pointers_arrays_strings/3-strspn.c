@@ -16,8 +16,8 @@ unsigned int _strspn(char *s, char *accept)
 	while (s[i] != '\0')
 	{
 		int y = 0;
-		
-		while (accept[y] != '\0')/*The accept strings compares itself with a elements in s */
+
+		while (accept[y] != '\0')/*accept strings compares with elements in s*/
 		{
 			if (accept[y] == s[i])
 			{

@@ -16,17 +16,17 @@ char *_strstr(char *haystack, char *needle)
 	{
 		int y = 0;
 
-		while (haystack[y] != '\0')
+		while (haystack[y] != '\0' && haystack[y] == needle[i])
 		{
-			if (haystack[y] == needle[i])
-			{
-				return (haystack + y);
-				/*Comparison Segment */
-				/*Printing segment of the result */
-			}
+			i++;
 			y++;
 		}
-		i++;
+		if (!needle[i])
+		{
+			return (haystack);
+		}
+		haystack++;
+		
 	}
 	return (0);
 }

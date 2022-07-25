@@ -25,6 +25,15 @@ char *_strdup(char *str)
 	}
 
 	dup = malloc((count * sizeof(char)) + 1);
+
+	if (dup == NULL)
+	{
+		return (NULL);
+	}
+	else if (dup == malloc(0))
+	{
+		return (NULL);
+	}
 	i = 0;
 	while (i < count)
 	{

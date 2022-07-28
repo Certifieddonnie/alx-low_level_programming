@@ -41,12 +41,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n > q)
 		n = q;
 	size = p + n + 1;
-	cat = malloc(size * sizeof(char *));
+	cat = malloc(size * sizeof(char));
 	if (cat == NULL)
 	{
 		return (0);
 	}
-	for (i = 0; s1[i] != '\0'; i++)
+	for (i = 0; i < p; i++)
 		cat[i] = s1[i];
 	for (j = 0; j < n; j++)
 	{

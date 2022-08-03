@@ -4,7 +4,7 @@
 /**
  * get_op_func - function to perform the operation asked by the user
  * @s: operator
- * 
+ *
  * Return: pointer to function
  */
 

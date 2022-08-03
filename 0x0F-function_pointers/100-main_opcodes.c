@@ -30,9 +30,9 @@ int main(int argc, char *argv[])
 	}
 
 	i = 0;
-	while(i < number_of_bytes)
+	while (i < number_of_bytes)
 	{
-		opcode = *(unsigned char*)address;
+		opcode = *(unsigned char *)address;
 		printf("%.2x", opcode);
 
 		if (i == number_of_bytes - 1)

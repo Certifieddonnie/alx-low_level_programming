@@ -13,8 +13,7 @@
 int main(int argc, char *argv[])
 {
 	int number_of_bytes, i;
-	int (*address)(int, char **) = main;
-	unsigned char opcode;
+	char *opcode = (char *) main;
 
 	if (argc != 2)
 	{
@@ -32,14 +31,12 @@ int main(int argc, char *argv[])
 	i = 0;
 	while (i < number_of_bytes)
 	{
-		opcode = *(unsigned char *)address;
-		printf("%.2x", opcode);
+		printf("%02x", opcode[i] & 0xFF);
 
-		if (i == number_of_bytes - 1)
-			continue;
-		printf(" ");
+		if (i != number_of_bytes - 1)
+			printf(" ");
+		i++;
 
-		address++;
 	}
 	printf("\n");
 	return (0);

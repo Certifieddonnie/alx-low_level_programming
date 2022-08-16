@@ -27,19 +27,15 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	while (idx > 1)
 	{
-		if (i == idx)
-		{
-			new_node->next = finder->next;
-			finder->next = new_node;
-			break;
-		}
-		i++;
 		finder = finder->next;
+		idx--;
 		if (!finder)
 		{
 			free(new_node);
 			return (NULL);
 		}
 	}
+	new_node->next = finder->next;
+	finder->next = new_node;
 	return (new_node);
 }

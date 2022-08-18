@@ -11,37 +11,20 @@ int _pow(int base, int exp);
 
 unsigned int binary_to_uint(const char *b)
 {
-	int sum = 0, i, y, len = 0;
+	int sum = 0, i;
 
 	if (b == NULL)
 		return (sum);
-	for (i = 0; b[i] != '\0'; i++)
-		len++;
-	i = 0, y = len - 1;
-	while (i < len)
+	i = 0;
+	while (b[i] != '\0')
 	{
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
-		sum += (b[i] - '0') * _pow(2, y);
+		if (b[i] == '1')
+			sum = (sum * 2) + 1;
+		else
+			sum = (sum * 2) + 0;
 		i++;
-		y--;
 	}
 	return (sum);
-}
-
-/**
- * _pow - Function for exponentials
- * @base: Number
- * @exp: power number
- * Return: value of result.
- */
-int _pow(int base, int exp)
-{
-	int i, num;
-
-	num = 1;
-	for (i = 0; i < exp; i++)
-		num *= base;
-
-	return (num);
 }

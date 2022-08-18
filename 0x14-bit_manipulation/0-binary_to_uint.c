@@ -1,20 +1,18 @@
 #include "main.h"
 
 /**
- * binary_to_uint - Function that converts a binary number to an
- * unsigned int.
- * @b: pointer to string of 0 and 1 char
- * Return: coverted number
+ * binary_to_uint - converts a binary
+ * @b: pointer char
+ * Return: the converted number
  */
 
 unsigned int binary_to_uint(const char *b)
 {
-	int sum = 0, i;
+	unsigned int i, sum = 0;
 
-	if (b == NULL)
-		return (sum);
-	i = 0;
-	while (b[i] != '\0')
+	if (!b)
+		return (0);
+	for (i = 0; b[i] != '\0'; i++)
 	{
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
@@ -22,7 +20,6 @@ unsigned int binary_to_uint(const char *b)
 			sum = (sum * 2) + 1;
 		else
 			sum = (sum * 2) + 0;
-		i++;
 	}
 	return (sum);
 }

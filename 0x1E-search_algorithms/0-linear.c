@@ -10,4 +10,18 @@
  */
 int linear_search(int *array, size_t size, int value)
 {
+    int pointer;
+
+    if (!*array)
+    {
+        return (-1);
+    }
+    for (pointer = 0; pointer < size; pointer++)
+    {
+        printf("Value checked array[%d] = [%d]", pointer, array[pointer]);
+        if (array[pointer] == value)
+        {
+            return (pointer);
+        }
+    }
 }
